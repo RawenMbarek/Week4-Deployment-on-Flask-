@@ -5,6 +5,7 @@ import numpy as np
 model = pickle.load(open('iri.pkl', 'rb'))
 app = Flask(__name__)
 
+
 @app.route('/')
 def man():
     return render_template('home.html')
@@ -22,19 +23,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    app.run(debug=True, port=80)
